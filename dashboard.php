@@ -66,7 +66,7 @@
   while($rows = mysqli_fetch_assoc($query)) {
     @$main_amount += $rows['amount'];
   }
-  echo $main_amount;
+  echo @$main_amount;
   ?> RTN</h2>
                         </div>
                       </div>
@@ -109,6 +109,8 @@
       $final_status = '<div class="badge badge-outline-warning">Pending</div>';
     } else if($status == "1") {
       $final_status = '<div class="badge badge-outline-success">Completed</div>';
+    } else if($status == "2") {
+      $final_status = '<div class="badge badge-outline-danger">Rejected</div>';
     }
     echo '                        <tr>
     <td> #'.$id.' </td>

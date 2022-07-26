@@ -84,15 +84,15 @@ if (isset($_SESSION['username'])) {
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="#">Pending Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Approved Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Rejected Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">History</a></li>
+                <li class="nav-item"> <a class="nav-link" href="log.php?status=pending">Pending Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="log.php?status=approved">Approved Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="log.php?status=rejected">Rejected Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="history.php">History</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="users.php">
               <span class="menu-icon">
                 <i class="mdi mdi-face"></i>
               </span>
