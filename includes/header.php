@@ -1,11 +1,16 @@
-<?php include('conn.php'); ?>
+<?php include('conn.php'); 
+if (isset($_SESSION['username'])) {
+} else {
+    echo "<meta http-equiv=\"refresh\" content=\"0; url=index.php\">";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard - Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
@@ -28,8 +33,7 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="brand-logo" href="index.php"><img src="assets/images/logo.png" alt="logo" width="100px" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -63,7 +67,7 @@
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="dashboard.php">
               <span class="menu-icon">
                 <i class="mdi mdi-grid"></i>
               </span>
@@ -80,15 +84,15 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="#l">Pending Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#l">Approved Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#l">Rejected Log</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#l">History</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Pending Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Approved Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Rejected Log</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">History</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+            <a class="nav-link" href="#">
               <span class="menu-icon">
                 <i class="mdi mdi-face"></i>
               </span>
